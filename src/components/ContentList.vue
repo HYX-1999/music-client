@@ -9,28 +9,28 @@
                             <use xlink:href="#icon-bofang"></use>
                         </svg>
                     </div>
-                </div> 
-                <p class="item-name">{{item.name||item.title}}</p>               
+                </div>
+                <p class="item-name">{{item.name||item.title}}</p>
             </li>
         </ul>
     </div>
 </template>
 <script>
-import {mixin} from '../mixins';
+import {mixin} from '../mixins'
 export default {
-    name: 'content-list',
-    mixins: [mixin],
-    props: ['contentList'],
-    methods: {
-        goAlbum(item,type){
-            this.$store.commit("setTempList",item);
-            if(type){                   //歌手
-                this.$router.push({path:`singer-album/${item.id}`});
-            }else{                      //歌单
-                this.$router.push({path:`song-list-album/${item.id}`});
-            }
-        }
+  name: 'content-list',
+  mixins: [mixin],
+  props: ['contentList'],
+  methods: {
+    goAlbum (item, type) {
+      this.$store.commit('setTempList', item)
+      if (type) { // 歌手
+        this.$router.push({path: `singer-album/${item.id}`})
+      } else { // 歌单
+        this.$router.push({path: `song-list-album/${item.id}`})
+      }
     }
+  }
 }
 </script>
 <style lang="scss" scoped>

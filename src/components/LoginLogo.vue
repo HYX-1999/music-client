@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-    name: 'login-logo'
+  name: 'login-logo'
 }
 </script>
 

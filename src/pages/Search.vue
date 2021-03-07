@@ -12,24 +12,24 @@ import searchSongs from '../components/search/SearchSongs'
 import searchSongLists from '../components/search/SearchSongLists'
 
 export default {
-   name: 'search',
-   components: {
-       searchSongs,
-       searchSongLists
-   },
-   data(){
-       return {
-           toggle: 'Songs',
-           currentView: 'searchSongs'
-       }
-   },
-   methods:{
-       //切换组件
-       handleChangeView(component){
-           this.currentView = 'search'+component;
-           this.toggle = component;
-       }
-   } 
+  name: 'search',
+  components: {
+    searchSongs,
+    searchSongLists
+  },
+  data () {
+    return {
+      toggle: 'Songs',
+      currentView: 'searchSongs'
+    }
+  },
+  methods: {
+    // 切换组件
+    handleChangeView (component) {
+      this.currentView = 'search' + component
+      this.toggle = component
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
