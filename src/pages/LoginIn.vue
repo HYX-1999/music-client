@@ -1,25 +1,25 @@
 <template>
-<div>
-    <loginLogo/>
-    <div class="signUp">
-        <div class="signUp-head">
-            <span>帐号登录</span>
-        </div>
-        <el-form :model="loginForm" ref="loginForm" label-width="70px" class="demo-ruleForm" :rules="rules">
-            <el-form-item prop="username" label="用户名">
-                <el-input v-model="loginForm.username" placeholder="用户名"></el-input>
-            </el-form-item>
-            <el-form-item prop="password" label="密码">
-                <el-input type="password" v-model="loginForm.password" placeholder="密码"></el-input>
-            </el-form-item>
+  <div class="login">
+    <!-- <loginLogo/> -->
+    <div class="loginUp">
+      <div class="loginUp-head">
+          <span>帐号登录</span>
+      </div>
+      <el-form :model="loginForm" ref="loginForm" label-width="70px" class="demo-ruleForm" :rules="rules">
+          <el-form-item prop="username" label="用户名">
+              <el-input v-model="loginForm.username" placeholder="用户名"></el-input>
+          </el-form-item>
+          <el-form-item prop="password" label="密码">
+              <el-input type="password" v-model="loginForm.password" placeholder="密码"></el-input>
+          </el-form-item>
 
-            <div class="login-btn">
-                <el-button @click="goSignUp">注册</el-button>
-                <el-button type="primary" @click="handleLoginIn">登录</el-button>
-            </div>
-        </el-form>
+          <div class="login-btn">
+              <el-button @click="goSignUp">注册</el-button>
+              <el-button type="primary" @click="handleLoginIn">登录</el-button>
+          </div>
+      </el-form>
     </div>
-</div>
+  </div>
 </template>
 <script>
 import loginLogo from '../components/LoginLogo'
@@ -89,5 +89,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/sign-up.scss';
+@import '../assets/css/login-in.scss';
 </style>
